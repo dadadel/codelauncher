@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block code %}
+<textarea id="text-code" name="code" rows={{ rows }} cols={{ cols }}>
+{{ code }}
+</textarea><br/>
+{% endblock %}
+
+{% block run %}
+<textarea id="text-result" rows="18" cols="70" readonly>{{ resrun }}</textarea>
+{% endblock %}
+
+{% block comp %}
+<textarea id="text-run" rows="7" cols="140" readonly>{{ rescomp }}</textarea>
+{% endblock %}

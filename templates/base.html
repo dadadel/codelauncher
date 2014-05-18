@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>WebDevTools</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/static/devc.css">
+</head>
+<body id="index" class="home">
+<div id="links">
+<ul>
+<li><a href="/">C Code</a></li>
+<li><a href="/py">Python Code</a></li>
+</ul>
+</div>
+<div id="content">
+    <!-- ************  CODING ZONE  ************ -->
+	<div id="code">
+		<form method="post" action="{{ url_for(target) }}">
+		    <div id="title-code" class="head-section">
+		      <h4>Source Code</h4>
+		    </div>
+			<input id="launch-button" class="head-section" type="submit" value="Launch" />
+		    {% block code %}
+		    {% endblock %}
+        </form>
+	</div>
+	
+	<!-- ************ RUNNING ZONE RESULTS ************ -->
+	
+	<div id="result">
+	    <h4>Output result</h4>
+	    {% block run %}
+	    {% endblock %}
+	</div>
+	
+	<!-- ************ COMPILATION RESULTS ZONE ************ -->
+	
+	<div id="compile">
+	<h4>Compilation</h4>
+	    {% block comp %}
+	    {% endblock %}
+	</div>
+</div>
+</body>
+</html>
