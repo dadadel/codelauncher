@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import os
 
 
 class RunCCode(object):
@@ -7,6 +8,8 @@ class RunCCode(object):
     def __init__(self, code=None):
         self.code = code
         self.compiler = "gcc"
+        if not os.path.exists('running'):
+            os.mkdir('running')
     
     def _compile_c_code(self, filename, prog="./running/a.out"):
         cmd = [self.compiler, filename, "-Wall", "-o", prog]
@@ -41,7 +44,9 @@ class RunPyCode(object):
     
     def __init__(self, code=None):
         self.code = code
-    
+        if not os.path.exists('running'):
+            os.mkdir('running')
+
     def _run_py_prog(self, cmd="a.py"):
         cmd = [sys.executable, cmd]
         p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
