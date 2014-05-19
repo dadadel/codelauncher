@@ -15,7 +15,7 @@ The easy way is to clone it and use it via a virtualenv:
 
 .. code-block:: sh
 
-    $ git clone git@github.com:dadadel/codelauncher.git
+    $ git clone https://github.com/dadadel/codelauncher.git  # or git@github.com:dadadel/codelauncher.git
     $ cd codelauncher
     $ virtualenv env
     $ . env/bin/activate
