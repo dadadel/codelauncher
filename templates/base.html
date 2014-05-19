@@ -17,7 +17,7 @@
 	<div id="code">
 		<form method="post" action="{{ url_for(target) }}">
 		    <div id="title-code" class="head-section">
-		      <h4>Source Code</h4>
+		      Source Code
 		    </div>
 			<input id="launch-button" class="head-section" type="submit" value="Launch" />
 		    {% block code %}
@@ -28,7 +28,9 @@
 	<!-- ************ RUNNING ZONE RESULTS ************ -->
 	
 	<div id="result">
-	    <h4>Output result</h4>
+        <div id="title-result" class="head-section">
+            Output result
+        </div>
 	    {% block run %}
 	    {% endblock %}
 	</div>
@@ -36,7 +38,9 @@
 	<!-- ************ COMPILATION RESULTS ZONE ************ -->
 	
 	<div id="compile">
-	<h4>Compilation</h4>
+        <div id="title-compile" class="head-section">
+            Compilation
+        </div>
 	    {% block comp %}
 	    {% endblock %}
 	</div>
