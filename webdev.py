@@ -6,7 +6,7 @@ default_c_code = """#include <stdio.h>
 
 int main(int argc, char **argv)
 {
-    printf("C: Youhou!!!\\n");
+    printf("Hello C World!!\\n");
     return 0;
 }    
 """
@@ -15,7 +15,7 @@ default_py_code = """import sys
 import os
 
 if __name__ == "__main__":
-    print "PY: Yaouh!!"
+    print "Hello Python World!!"
 """
 
 default_rows = "15"
