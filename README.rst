@@ -8,6 +8,8 @@ It uses only HTML5 and CSS3. No Javascript is needed.
 
 The only dependency is Flask.
 
+WARNING: Be careful, this is intended to run in local as there is no sandbox, no security management.
+
 How to use
 ----------
 
