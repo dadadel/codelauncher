@@ -24,7 +24,7 @@ li {
 
 #code {
 	position: absolute;
-	height: auto;
+	height: 60%;
 	min-height: 350px;
 	min-width: 400px;
 	left: 10px;
@@ -34,7 +34,7 @@ li {
 
 #result {
     position: absolute;
-	height: auto;
+	height: 60%;
     min-height: 350px;
     min-width: 400px;
 	right: 10px;
@@ -79,11 +79,16 @@ li {
 	left: 5px;
 }
 
-#text-code {
+#text-code, #text-code-ace {
 	position: absolute;
 	top: 50px;
 	width: 100%;
     height: 80%;
+}
+
+#text-code-ace {
+    padding: 2px;
+    border: 1px solid rgb(169, 169, 169);
 }
 
 #text-result {
@@ -101,3 +106,6 @@ li {
     height: 80%;
 }
 
+.hidden {
+    display: none;
+}
