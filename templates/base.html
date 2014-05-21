@@ -14,36 +14,36 @@
 </div>
 <div id="content">
     <!-- ************  CODING ZONE  ************ -->
-	<div id="code">
-		<form method="post" action="{{ url_for(target) }}">
-		    <div id="title-code" class="head-section">
-		      Source Code
-		    </div>
-			<input id="launch-button" class="head-section" type="submit" value="Launch" />
-		    {% block code %}
-		    {% endblock %}
+    <div id="code">
+        <form method="post" action="{{ url_for(target) }}">
+            <div id="title-code" class="head-section">
+              Source Code
+            </div>
+            <input id="launch-button" class="head-section" type="submit" value="Launch" />
+            {% block code %}
+            {% endblock %}
         </form>
-	</div>
-	
-	<!-- ************ RUNNING ZONE RESULTS ************ -->
-	
-	<div id="result">
+    </div>
+    
+    <!-- ************ RUNNING ZONE RESULTS ************ -->
+    
+    <div id="result">
         <div id="title-result" class="head-section">
             Output result
         </div>
-	    {% block run %}
-	    {% endblock %}
-	</div>
-	
-	<!-- ************ COMPILATION RESULTS ZONE ************ -->
-	
-	<div id="compile">
+        {% block run %}
+        {% endblock %}
+    </div>
+    
+    <!-- ************ COMPILATION RESULTS ZONE ************ -->
+    
+    <div id="compile">
         <div id="title-compile" class="head-section">
             Compilation / Output
         </div>
-	    {% block comp %}
-	    {% endblock %}
-	</div>
+        {% block comp %}
+        {% endblock %}
+    </div>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
 <script>

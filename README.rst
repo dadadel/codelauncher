@@ -8,7 +8,7 @@ It uses only HTML5 and CSS3. No Javascript is needed but if activated the `Ace e
 
 The only dependency is Flask.
 
-Below you have _screenshots.
+Below you have screenshots_.
 
 This software is made for you if you are looking for:
 
