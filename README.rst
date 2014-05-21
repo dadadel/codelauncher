@@ -47,10 +47,10 @@ Run the server:
 
 Then visite with your web browser the URL: `http://127.0.0.1:5000`.
 
-.. _screenshots:
-
 Screenshot
 ----------
+
+.. _screenshots:
 
 - Ace editor is used when Javascript is activated:
 
@@ -61,5 +61,3 @@ Screenshot
 
 .. image:: screenshot-codelauncher.png
    :alt: Screenshot
-
-
