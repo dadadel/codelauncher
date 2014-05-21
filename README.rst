@@ -54,7 +54,7 @@ Screenshot
 
 - Ace editor is used when Javascript is activated:
 
-.. image:: screenshot-codelauncher.png
+.. image:: screenshot-codelauncher-ace.png
    :alt: Screenshot
 
 - When no Javascript activated, basic text box:
