@@ -47,14 +47,14 @@ def runpy():
     if request.method == 'POST':
         code = request.form['code']
         run = runcode.RunPyCode(code)
-        _, resrun = run.run_py_code()
+        rescompil, resrun = run.run_py_code()
         if not resrun:
             resrun = 'No result!'
     else:
         code = default_py_code
         resrun = 'No result!'
-
-    rescompil = "No compilation for Python"
+        rescompil = "No compilation for Python"
+        
     return render_template("main.html",
                            code=code,
                            target="runpy",
