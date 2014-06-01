@@ -45,27 +45,25 @@
         {% endblock %}
     </div>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+<script src="{{ url_for('static', filename='ace/ace.js') }}"></script>
 <script>
-    if (window.ace) {
-        // The Ace editor needs divs instead of textareas
-        // So we hide the textarea and show a div instead
-        var editorElement = document.getElementById("text-code");
-        editorElement.classList.add("hidden");
-        document.getElementById("text-code-ace").classList.remove("hidden");
+    // The Ace editor needs divs instead of textareas
+    // So we hide the textarea and show a div instead
+    var editorElement = document.getElementById("text-code");
+    editorElement.classList.add("hidden");
+    document.getElementById("text-code-ace").classList.remove("hidden");
 
-        // Set up the editor
-        var editor = ace.edit("text-code-ace");
-        editor.setTheme("ace/theme/tomorrow");
-        var language = ("{{ target }}" === "runpy") ? "python" : "c_cpp";
-        editor.getSession().setMode("ace/mode/" + language);
+    // Set up the editor
+    var editor = ace.edit("text-code-ace");
+    editor.setTheme("ace/theme/tomorrow");
+    var language = ("{{ target }}" === "runpy") ? "python" : "c_cpp";
+    editor.getSession().setMode("ace/mode/" + language);
 
-        // Make sure we copy the content of the editor to the textarea before posting
-        // its content to the server
-        document.getElementById("launch-button").addEventListener("click", function () {
-            editorElement.innerHTML = editor.getValue();
-        });
-    }
+    // Make sure we copy the content of the editor to the textarea before posting
+    // its content to the server
+    document.getElementById("launch-button").addEventListener("click", function () {
+        editorElement.innerHTML = editor.getValue();
+    });
 </script>
 </body>
 </html>
