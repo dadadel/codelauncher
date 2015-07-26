@@ -1,7 +1,7 @@
 codelauncher
 ============
 
-A Flask Python server to launch C code and Python code online.
+A Flask Python server to launch C/C++ code and Python code online.
 
 This is a simple, light Flask server that allows you to quickly run C code or Python code.
 It uses only HTML5 and CSS3. No Javascript is needed but if activated the `Ace editor <http://ace.c9.io>`_ is available.

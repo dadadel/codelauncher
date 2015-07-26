@@ -11,6 +11,17 @@ int main(int argc, char **argv)
 }    
 """
 
+default_cpp_code = """#include <iostream>
+
+using namespace std;
+
+int main(int argc, char **argv)
+{
+    cout << "Hello C++ World" << endl;
+    return 0;
+}
+"""
+
 default_py_code = """import sys
 import os
 
@@ -37,6 +48,26 @@ def runc():
     return render_template("main.html",
                            code=code,
                            target="runc",
+                           resrun=resrun,
+                           rescomp=rescompil,
+                           rows=default_rows, cols=default_cols)
+
+@app.route("/cpp")
+@app.route("/runcpp", methods=['POST', 'GET'])
+def runcpp():
+    if request.method == 'POST':
+        code = request.form['code']
+        run = runcode.RunCppCode(code)
+        rescompil, resrun = run.run_cpp_code()
+        if not resrun:
+            resrun = 'No result!'
+    else:
+        code = default_cpp_code
+        resrun = 'No result!'
+        rescompil = ''
+    return render_template("main.html",
+                           code=code,
+                           target="runcpp",
                            resrun=resrun,
                            rescomp=rescompil,
                            rows=default_rows, cols=default_cols)
